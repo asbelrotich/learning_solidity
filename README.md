@@ -1,3 +1,13 @@
-This is my first solidity smart-contract
-It is a simple bookstore contract, where the owner adds a book to the bookstore as well as owner can call the book to check if it's existing in the bookstore.
-The user can as well purchase a book from the bookstore
+# Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat ignition deploy ./ignition/modules/Lock.ts
+```
