@@ -1,6 +1,5 @@
 //SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.2;
-//bookstore - (_isbn, _title, _author, _price, _stock, _isavailable
 contract bookstore{
     address public owner;
     struct book{
@@ -47,10 +46,9 @@ contract bookstore{
       if (Book.stock == 0) {
         Book.isavailable = false;
       }
-
-     payable (owner).transfer(msg.value);
+     payable(owner).transfer(msg.value);
      totalbooksSold += _quantity;
-      emit bookpurchased(_bookIDs, msg.sender, _quantity );
+      emit bookpurchased(_bookIDs, msg.sender, _quantity);
     }
     function getallbooks() public view returns (uint256 [] memory, string [] memory, string [] memory, uint256 [] memory, uint256 [] memory) {
      uint256 length = bookIDs.length;
