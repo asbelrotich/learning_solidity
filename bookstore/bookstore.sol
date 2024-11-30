@@ -1,8 +1,7 @@
-// SPDX-License-Identifier: GPL 3.0
-pragma solidity ^0.8.2;
+// SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.5.11;
 // struct book (id, Title, Isbn, Price, author, stock, isavailable)
 //bookstore has owner which is the main address
-//
 contract Bookstore {
     address public owner;
     struct book{
@@ -17,7 +16,7 @@ contract Bookstore {
 
     event bookadded(uint256 indexed bookId, string title, string author, uint256 price, uint256 stock);
     event bookpurchased(uint256 indexed bookId, address indexed buyer, uint256 quantity);
-    constructor () {
+    constructor() {
         owner = msg.sender;
     }
     function addbook(uint256 _bookId, string memory _title, string memory _author, uint256 _price, uint256 _stock) public {
